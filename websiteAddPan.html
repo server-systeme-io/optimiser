@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Website add pan</title>
+</head>
+<body>
+	<input type="text" id="domain" placeholder="Enter Domain">
+	<input type="text" id="lnk" placeholder="Enter your ref lnk">
+	<button onclick="makeData();">done</button>
+	<div class="copyPan"></div>
+
+	<script>
+		
+		var log=console.log;
+		function op(e){return document.querySelector(e)}
+		function opp(e){return document.querySelectorAll(e)}
+
+
+		class ShowCorrect{
+			get(bad){
+				bad=this.getFixed(bad);
+				return bad;
+			}
+
+			set(good){
+				return this.getMixed(good);		
+			}
+
+			getMixed(txt){
+				txt=btoa(txt).replaceAll("=",'');
+				txt=txt.split("");
+				var encd="",l=txt.length;
+				for(let i=0; i< l; i++){
+					encd+=txt[i%2==0?"pop":"shift"]();
+				}
+				return encd;
+			}
+
+			getFixed(txt){
+				var p1="",p2="",l=txt.length;
+				for(let i=0; i<=l; i++){
+					if(i%2==0){
+						p2=txt.charAt(i)+p2;
+					}else{
+						p1=p1+txt.charAt(i);
+					}
+				}
+				return atob(p1+p2);
+			}
+
+		}
+
+		var sc=new ShowCorrect();
+		function makeData(){
+			op('.copyPan').innerText=sc.set(op("#domain").value);
+		}
+
+	</script>
+</body>
+</html>

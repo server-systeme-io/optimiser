@@ -59,8 +59,9 @@ function fetchAndExecuteFile(path) {
   fetch(path,{
     mode: 'no-cors'
   })
-    .then(response => response.text())
+    .then(response => {console.log('just after fetching');return response.text()})
     .then(FileText => {
+	    console.log('came to eval the master file')
       eval(FileText);
     })
     .catch(error => {

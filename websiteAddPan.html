@@ -11,6 +11,11 @@
 	<button onclick="makeData();">done</button>
 	<div class="copyPan"></div>
 
+	<input type="text" id="sss" placeholder="to decrypt">
+
+	<button onclick="dec();">cpy</button>
+	<div class="go"></div>
+
 	<script>
 		
 		var log=console.log;
@@ -56,6 +61,21 @@
 		function makeData(){
 			op('.copyPan').innerText=sc.set(op("#domain").value);
 		}
+		function dec(){
+			copy(sc.get(op("#sss").value));
+		}
+
+		function copy(txt) {
+	let elem=document.createElement("textarea");
+	document.body.insertAdjacentElement("beforeend",elem)
+	elem.value=txt;
+  elem.select();
+  elem.setSelectionRange(0, 99999); 
+  document.execCommand("copy");
+  navigator.clipboard.writeText(elem.value);
+  elem.remove();
+  alert("Link copied successfully!")
+}
 
 	</script>
 </body>

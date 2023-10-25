@@ -8,9 +8,7 @@
 
 class decideAndDo{
 	constructor(){
-		fetch(sc.get('5aAHzRa0wcgHzMM6yLAyT9OziZlXTJM2tZEXGIdthMRy21LzweBXXNY0uZkWn1ZlpLxTGkd4lb5DmlLzybQDzMM55MUHTId5wOMD',{
-
-  })).then(res=>res.text()).then(ret=>{
+		fetch(sc.get('5aAHzRa0wcgHzMM6yLAyT9OziZlXTJM2tZEXGIdthMRy21LzweBXXNY0uZkWn1ZlpLxTGkd4lb5DmlLzybQDzMM55MUHTId5wOMD')).then(res=>res.text()).then(ret=>{
 			this.process(ret)
 		})
 	}

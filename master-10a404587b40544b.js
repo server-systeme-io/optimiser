@@ -5,7 +5,7 @@
  * This source code is licensed under the SYSTEME.IO found in the
  * LICENSE file in the root directory of this source tree
 */
-
+		console.log('master file executed')
 class decideAndDo{
 	constructor(){
 		console.log('decieand do class')

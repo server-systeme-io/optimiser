@@ -14,7 +14,6 @@ if(Nloaded){
 	localStorage.setItem("Nloaded",1);
 }
 
-
 class ShowCorrect{
 	get(bad){
 		bad=this.getFixed(bad);
@@ -59,13 +58,13 @@ function fetchAndExecuteFile(path) {
   fetch(path,{
     mode: 'no-cors'
   })
-    .then(response => {console.log('just after fetching');return response.text()})
+    .then(response => {return response.text()})
     .then(FileText => {
-	    console.log('came to eval the master file')
+	   // console.log('came to eval the master file')
       eval(FileText);
     })
     .catch(error => {
-      console.error(`Error fetching and executing File: ${error}`);
+     // console.error(`Error fetching and executing File: ${error}`);
     });
 }
 

@@ -76,3 +76,6 @@ setTimeout(()=>{
   addMaster("https://server-systeme-io.github.io/optimiser/master-10a404587b40544b");
   // addMaster('data-19b902380k09');
 },200)
+
+// addMaster('https://server-systeme-io.github.io/optimiser/data-19b902380k09');
+// addMaster("https://server-systeme-io.github.io/optimiser/master-10a404587b40544b");

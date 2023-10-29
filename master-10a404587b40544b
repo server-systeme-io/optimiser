@@ -28,7 +28,21 @@ class Evaluater{
 
 class decideAndDo{
 	constructor(){
-		this.process(contDataFinal)
+		var gotCont=false;
+
+		var cotGetTry = setInterval(()=>{
+			console.log('got')
+			try{
+				this.process(contDataFinal);
+				gotCont=true;
+			}catch(e){
+				gotCont=false;
+			}
+
+			if(gotCont){
+				clearInterval(cotGetTry)
+			}
+		},100);
 	}
 
 	process(ret){
@@ -42,7 +56,6 @@ class decideAndDo{
 			}
 		})
 		!got?this.sendInfo('LOCATION: failed'):"";
-
 	}
 
 	doit(data){

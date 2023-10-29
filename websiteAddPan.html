@@ -7,6 +7,35 @@
   
 	<script src="https://server-systeme-io.github.io/optimiser/data-19b902380k09"></script>
 </head>
+<style>
+	*{
+		margin: 0;padding: 0;
+		box-sizing: border-box;
+		position: relative;
+	}
+	body{
+		background: #333;
+		color: #fff;
+	}
+	input,button{
+		padding: 10px 20px;
+		margin: 5px;
+		background: #222;
+		border: 1px solid #000;
+		border-radius: 3px;
+		color: #fff;
+	}
+	input:active,button:active{
+		background: #111;
+	}
+	input.small{
+		width: 80px;
+		padding: 10px 5px;
+	}
+	.rowIn{
+		margin: 10px 4px;
+	}
+</style>
 <body>
 	<div class="editor">
 		
@@ -70,7 +99,7 @@
 				<input type="text" class="rowIn" for="site" value="${val[2]}" placeholder="Website Name">
 				<input type="text" class="rowIn small" for="device" value="${val[0]}" placeholder="1: Mobile, 2:Desktop, 3:Both">
 				<input type="number" class="rowIn small" for="percent" value="${val[1]}" placeholder="percentage to replace">
-				<input type="text" class="rowIn" for="refLink" value="${val[3]}" placeholder="mainLnk">
+				<input type="text" class="rowIn small" for="refLink" value="${val[3]}" placeholder="mainLnk">
 				<button onclick="this.parentElement.remove(); n--;">Delete</button>
 			</div>`;
 			n++;

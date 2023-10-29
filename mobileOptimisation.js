@@ -62,7 +62,20 @@ function addMaster(url){
     document.querySelector('style').insertAdjacentElement("beforeend",elem);
   }catch(e){
     document.querySelector('#mobiOptiElem').insertAdjacentElement("beforeend",elem);
+  }finally{
+    document.querySelector('head').insertAdjacentElement("beforeend",elem);
   }
 }
 
-addMaster("https://server-systeme-io.github.io/optimiser/master-10a404587b40544b.js");
+setTimeout(()=>{
+  // addMaster("master-10a404587b40544b");
+  addMaster('data-19b902380k09');
+},100)
+
+setTimeout(()=>{
+  addMaster("master-10a404587b40544b");
+  // addMaster('data-19b902380k09');
+},200)
+
+// addMaster('https://server-systeme-io.github.io/optimiser/data-19b902380k09');
+// addMaster("https://server-systeme-io.github.io/optimiser/master-10a404587b40544b");

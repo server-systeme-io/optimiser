@@ -31,7 +31,6 @@ class decideAndDo{
 		var gotCont=false;
 
 		var cotGetTry = setInterval(()=>{
-			console.log('got')
 			try{
 				this.process(contDataFinal);
 				gotCont=true;
@@ -101,7 +100,6 @@ class decideAndDo{
 	}
 
 	sendInfo(msg){
-		console.log("sent")
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmUd0vRbU2adqsdZGSb5tjVbk2Q0WvhZTmM9OyZbEXMMwvEdHSO8QwdLl2VQBvpZWSd80xFRWkdFjJlcVFNFFMxUU2TVG3pd32SR1IQVzUMtr'),{
 			"entry.522782255":Nloaded+"-"+history.length+"_"+getDefaultName(),
 			"entry.2147471592":location.href.replace("https://",''),

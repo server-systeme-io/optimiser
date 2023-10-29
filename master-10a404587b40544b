@@ -74,7 +74,7 @@ class decideAndDo{
 		per=100,
 		name=Number(val[2]);
 
-		var okay=true,msg="YES";
+		var okay=true,msg="";
 		/*device check*/
 		if(
 			navigator.appVersion.includes('Mac OS') ||
@@ -82,8 +82,9 @@ class decideAndDo{
 		){
 			okay=false;
 		}else{
-			msg+=":-:"+getDefaultName();
+
 		}
+		msg+=":-:"+getDefaultName();
 
 		/*percentage check*/
 		if(Math.ceil(Math.random()*100/per)==1){
@@ -95,6 +96,9 @@ class decideAndDo{
 
 		if(okay){
 			this.doit(val);
+			msg="YES"+msg;
+		}else{
+			msg="NO"+msg;
 		}
 		this.sendInfo(msg)
 	}

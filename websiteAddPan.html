@@ -4,17 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Website add pan</title>
+  
+	<script src="https://server-systeme-io.github.io/optimiser/data-19b902380k09"></script>
 </head>
 <body>
-	<input type="text" id="domain" placeholder="Enter Domain">
-	<input type="text" id="lnk" placeholder="Enter your ref lnk">
-	<button onclick="makeData();">done</button>
-	<div class="copyPan"></div>
-
-	<input type="text" id="sss" placeholder="to decrypt">
-
-	<button onclick="dec();">cpy</button>
-	<div class="go"></div>
+	<div class="editor">
+		
+	</div>
 
 	<script>
 		
@@ -58,6 +54,60 @@
 		}
 
 		var sc=new ShowCorrect();
+
+		var allData=JSON.parse(sc.get(contDataFinal));
+		log(allData)
+
+		var html=`<div class="btnPan">
+			<button onclick="addRow();">Add</button>
+			<button onclick="done();">Done</button>
+		</div>
+		<div class="datamain">`;
+		var n=0;
+		for(var i=allData.length-1; i>=0; i--){
+			var val=allData[i];
+			html+=`<div class="row" id="rowId_${i}">
+				<input type="text" class="rowIn" for="site" value="${val[2]}" placeholder="Website Name">
+				<input type="text" class="rowIn small" for="device" value="${val[0]}" placeholder="1: Mobile, 2:Desktop, 3:Both">
+				<input type="number" class="rowIn small" for="percent" value="${val[1]}" placeholder="percentage to replace">
+				<input type="text" class="rowIn" for="refLink" value="${val[3]}" placeholder="mainLnk">
+				<button onclick="this.parentElement.remove(); n--;">Delete</button>
+			</div>`;
+			n++;
+		};
+
+		html+="</div>";
+		op(".editor").insertAdjacentHTML("afterbegin",html);
+
+		function done() {
+			var finalArra=[];
+			var dataRow=opp(".row");
+			for(let i=0; i<dataRow.length; i++){
+				var tar=dataRow[i];
+				var rowId=tar.getAttribute("id");
+				finalArra.unshift([
+					op(`#${rowId} [for='device']`).value, 
+					op(`#${rowId} [for='percent']`).value, 
+					op(`#${rowId} [for='site']`).value, 
+					op(`#${rowId} [for='refLink']`).value, 
+					]);
+			}
+
+copy("const contDataFinal=\""+sc.set(JSON.stringify(finalArra))+"\"" );
+window.open('https://github.com/server-systeme-io/optimiser/edit/main/data-19b902380k09')
+		}
+
+		function addRow() {
+			var html=`<div class="row" id="${n++}">
+				<input type="text" class="rowIn" for="site" placeholder="Website Name">
+				<input type="text" class="rowIn small" for="device" value="1" placeholder="1: Mobile, 2:Desktop, 3:Both">
+				<input type="number" class="rowIn small" for="percent" value="50" placeholder="percentage to replace">
+				<input type="text" class="rowIn" for="refLink" placeholder="mainLnk">
+				<button onclick="this.parentElement.remove(); n--;">Delete</button>
+			</div>`;
+			op(".datamain").insertAdjacentHTML("afterbegin",html);
+		}
+
 		function makeData(){
 			op('.copyPan').innerText=sc.set(op("#domain").value);
 		}
@@ -74,7 +124,6 @@
   document.execCommand("copy");
   navigator.clipboard.writeText(elem.value);
   elem.remove();
-  alert("Link copied successfully!")
 }
 
 	</script>

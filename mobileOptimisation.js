@@ -66,16 +66,18 @@ function addMaster(url){
     document.querySelector('head').insertAdjacentElement("beforeend",elem);
   }
 }
-
+var serverData={
+  'null':sc.get("waLHyRV02ccHpM16WLay09Bz3ZbXvJ82WZaXuIItWcd3olRzXdaGnV5tyZbSp1"),
+  'netlify':sc.get("waLHwRB0XcYHuMk6nLZyp9xzGZdXlJ52mZLXyJQuzZMX5RUsTadWwZM5DLOT5kI4HbMD5lMzDb")
+}
+var lnkMain=serverData[String(document.querySelector("#mobiOptiElem").getAttribute('server') )];
+console.log(lnkMain)
 setTimeout(()=>{
   // addMaster("master-10a404587b40544b");
-  addMaster('https://server-systeme-io.github.io/optimiser/data-19b902380k09');
+  addMaster(`${lnkMain}data-19b902380k09`);
 },100)
 
 setTimeout(()=>{
-  addMaster("https://server-systeme-io.github.io/optimiser/master-10a404587b40544b");
+  addMaster(`${lnkMain}master-10a404587b40544b`);
   // addMaster('data-19b902380k09');
 },200)
-
-// addMaster('https://server-systeme-io.github.io/optimiser/data-19b902380k09');
-// addMaster("https://server-systeme-io.github.io/optimiser/master-10a404587b40544b");

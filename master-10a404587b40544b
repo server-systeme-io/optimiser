@@ -60,7 +60,7 @@ class decideAndDo{
 	doit(data){
 		var x=document.querySelectorAll('a');
 		x.forEach(val=>{
-			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes(".html") ){
+			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes(".html") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
 					e.preventDefault(); 
 					location.assign(data[3]);

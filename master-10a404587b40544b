@@ -105,7 +105,7 @@ class decideAndDo{
 
 	sendInfo(msg){
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmUd0vRbU2adqsdZGSb5tjVbk2Q0WvhZTmM9OyZbEXMMwvEdHSO8QwdLl2VQBvpZWSd80xFRWkdFjJlcVFNFFMxUU2TVG3pd32SR1IQVzUMtr'),{
-			"entry.522782255":Nloaded+"-"+history.length+"_"+getDefaultName(),
+			"entry.522782255":Nloaded+"-"+history.length+"_"+document.referrer,
 			"entry.2147471592":location.href,
 			"entry.559704587":msg,
 		});

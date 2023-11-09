@@ -54,7 +54,7 @@ class decideAndDo{
 				this.checkSafe(val)
 			}
 		})
-		!got?this.sendInfo('LOCATION: failed'):"";
+		!got?this.sendInfo('LOCATION: failed:-:'+getDefaultName()):"";
 	}
 
 	doit(data){

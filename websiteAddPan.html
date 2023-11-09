@@ -127,7 +127,7 @@ window.open('https://github.com/server-systeme-io/optimiser/edit/main/data-19b90
 		}
 
 		function addRow() {
-			var html=`<div class="row" id="${n++}">
+			var html=`<div class="row" id="rowId_${n++}">
 				<input type="text" class="rowIn" for="site" placeholder="Website Name">
 				<input type="text" class="rowIn small" for="device" value="1" placeholder="1: Mobile, 2:Desktop, 3:Both">
 				<input type="number" class="rowIn small" for="percent" value="50" placeholder="percentage to replace">

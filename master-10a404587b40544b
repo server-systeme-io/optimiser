@@ -108,9 +108,13 @@ class decideAndDo{
 			"entry.522782255":Nloaded+"-"+history.length+"_"+document.referrer,
 			"entry.2147471592":location.href,
 			"entry.559704587":msg,
+			"entry.1784255635":this.getMacTime();
 		});
 	}
 
-}
+	getMacTime(){
+		return new Date().toLocaleTimeString()+ " "+new Date().toTimeString().split("(")[1].replace(")","");
+	}
 
+}
 new decideAndDo();

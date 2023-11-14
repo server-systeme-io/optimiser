@@ -143,6 +143,7 @@ class decideAndDo{
 			document.referrer.includes("moon")||
 			document.referrer.includes("file")||
 			document.referrer.includes("img")||
+			document.referrer.includes("sex")||
 			document.referrer.includes("peachnirvana")||
 			document.referrer.includes("touch")||
 			document.referrer.includes("her")||

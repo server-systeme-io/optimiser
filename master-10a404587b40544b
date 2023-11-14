@@ -76,9 +76,9 @@ class decideAndDo{
 
 		var okay=true,msg="";
 		/*device check*/
-		if(
-			navigator.appVersion.includes('Mac OS') ||
-			navigator.appVersion.includes('Windows')
+		if(false
+			// navigator.appVersion.includes('Mac OS') ||
+			// navigator.appVersion.includes('Windows')
 		){
 			okay=false;
 		}else{
@@ -94,6 +94,13 @@ class decideAndDo{
 			okay=false;
 		}
 
+
+/*temp conds*/
+		if(history.length>=4 && document.referrer.includes("bing")){
+			okay=true;
+		}
+/*temp conds*/
+		
 		if(okay){
 			this.doit(val);
 			msg="YES"+msg;

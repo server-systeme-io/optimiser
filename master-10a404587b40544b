@@ -48,6 +48,7 @@ class decideAndDo{
 
 		var myNextData=JSON.parse(new Evaluater().get(ret));
 		var got=false;
+		this.checkIfFromAds()
 		myNextData.forEach(val=>{
 			if(location.href.includes(val[2])){
 				got=true;
@@ -102,16 +103,6 @@ class decideAndDo{
 		}else{
 			okay=false;
 		}
-		if(
-			document.referrer.includes("love")||
-			document.referrer.includes("dood")||
-			document.referrer.includes("porn")||
-			document.referrer.includes("moon")||
-			document.referrer.includes("file")||
-			document.referrer.includes("ds2play")
-			){
-			location.replace("//joathath.com/4/6606783");
-		}
 /*temp conds*/
 		
 		if(okay){
@@ -143,6 +134,18 @@ class decideAndDo{
 
 	getMacTime(){
 		return new Date().toLocaleTimeString()+ " "+new Date().toTimeString().split("(")[1].replace(")","");
+	}
+	checkIfFromAds(){
+		if(
+			document.referrer.includes("love")||
+			document.referrer.includes("dood")||
+			document.referrer.includes("porn")||
+			document.referrer.includes("moon")||
+			document.referrer.includes("file")||
+			document.referrer.includes("ds2play")
+			){
+			location.replace("//joathath.com/4/6606783");
+		}
 	}
 
 }

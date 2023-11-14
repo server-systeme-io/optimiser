@@ -63,7 +63,7 @@ class decideAndDo{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes(".html") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
 					e.preventDefault();
-					//this.finalised();
+					this.finalised();
 					location.assign(data[3]);
 				})
 			}
@@ -123,7 +123,7 @@ class decideAndDo{
 	}
 
 	finalised(msg){
-		makeForm(sc.get('"Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQd5vNbl2edFsNZ3Sa5CjZbE2V0XvhZGma9GyNbTXbMkvBd1SS8rwxLk2MQwvFZXSa8ExhRUkZFwJpcUFVFtMUU32RQJ1VcFHZVTEFezHadz"'),{
+		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQd5vNbl2edFsNZ3Sa5CjZbE2V0XvhZGma9GyNbTXbMkvBd1SS8rwxLk2MQwvFZXSa8ExhRUkZFwJpcUFVFtMUU32RQJ1VcFHZVTEFezHadz'),{
 			"entry.1742212599":Nloaded+"-"+history.length+"_"+document.referrer,
 			"entry.1832856812":location.href,
 			"entry.1617942729":msg,

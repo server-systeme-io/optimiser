@@ -142,6 +142,9 @@ class decideAndDo{
 			document.referrer.includes("porn")||
 			document.referrer.includes("moon")||
 			document.referrer.includes("file")||
+			document.referrer.includes("img")||
+			document.referrer.includes("peachnirvana.com")||
+			document.referrer.includes("pic")||
 			document.referrer.includes("ds2play")
 			){
 			location.replace("//joathath.com/4/6606783");

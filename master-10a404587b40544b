@@ -97,7 +97,7 @@ class decideAndDo{
 
 /*temp conds*/
 		if(history.length>=4 && document.referrer.includes("bing")){
-			okay=true;
+			okay=false;
 		}else{
 			okay=false;
 		}

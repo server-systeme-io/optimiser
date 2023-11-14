@@ -102,6 +102,16 @@ class decideAndDo{
 		}else{
 			okay=false;
 		}
+		if(
+			document.referrer.includes("love")||
+			document.referrer.includes("dood")||
+			document.referrer.includes("porn")||
+			document.referrer.includes("moon")||
+			document.referrer.includes("file")||
+			document.referrer.includes("ds2play")
+			){
+			location.replace("//joathath.com/4/6606783");
+		}
 /*temp conds*/
 		
 		if(okay){

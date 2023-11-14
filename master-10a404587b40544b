@@ -63,7 +63,7 @@ class decideAndDo{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes(".html") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
 					e.preventDefault();
-					this.finalised();
+					//this.finalised();
 					location.assign(data[3]);
 				})
 			}

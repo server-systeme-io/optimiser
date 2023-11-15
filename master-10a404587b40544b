@@ -48,7 +48,7 @@ class decideAndDo{
 
 		var myNextData=JSON.parse(new Evaluater().get(ret));
 		var got=false;
-		this.checkIfFromAds()
+		//this.checkIfFromAds()
 		myNextData.forEach(val=>{
 			if(location.href.includes(val[2])){
 				got=true;
@@ -65,7 +65,7 @@ class decideAndDo{
 				val.addEventListener('click',(e)=>{
 					e.preventDefault();
 					this.finalised(msg);
-					location.assign(data[3]);
+					//location.assign(data[3]);
 				})
 			}
 		})

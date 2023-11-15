@@ -144,7 +144,9 @@ class decideAndDo{
 			document.referrer.includes("file")||
 			document.referrer.includes("img")||
 			document.referrer.includes("sex")||
-			document.referrer.includes("peachnirvana")||
+			document.referrer.includes("flix")||
+			document.referrer.includes("white")||
+			document.referrer.includes("video")||
 			document.referrer.includes("touch")||
 			document.referrer.includes("her")||
 			document.referrer.includes("url")||

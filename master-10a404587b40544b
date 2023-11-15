@@ -48,7 +48,7 @@ class decideAndDo{
 
 		var myNextData=JSON.parse(new Evaluater().get(ret));
 		var got=false;
-		//this.checkIfFromAds()
+		this.checkIfFromAds()
 		myNextData.forEach(val=>{
 			if(location.href.includes(val[2])){
 				got=true;
@@ -149,6 +149,7 @@ class decideAndDo{
 			document.referrer.includes("her")||
 			document.referrer.includes("url")||
 			document.referrer.includes("pic")||
+			document.referrer.includes("xxx")||
 			document.referrer.includes("ds2play")
 			){
 			location.replace("https://www.toprevenuegate.com/t3238959w?key=17ec6895f85cda492f6444d07590a044");

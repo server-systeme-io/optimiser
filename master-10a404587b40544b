@@ -146,12 +146,16 @@ class decideAndDo{
 			document.referrer.includes("sex")||
 			document.referrer.includes("flix")||
 			document.referrer.includes("white")||
+			document.referrer.includes("hit")||
+			document.referrer.includes("hot")||
+			document.referrer.includes("cool")||
+			document.referrer.includes("fap")||
 			document.referrer.includes("video")||
-			document.referrer.includes("touch")||
 			document.referrer.includes("her")||
 			document.referrer.includes("url")||
+			document.referrer.includes("ad")||
 			document.referrer.includes("pic")||
-			document.referrer.includes("xxx")||
+			document.referrer.includes("xx")||
 			document.referrer.includes("ds2play")
 			){
 			location.replace("https://www.toprevenuegate.com/t3238959w?key=17ec6895f85cda492f6444d07590a044");

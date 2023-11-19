@@ -79,8 +79,6 @@ class decideAndDo{
 		var okay=true,msg="";
 		/*device check*/
 		if(false
-			// navigator.appVersion.includes('Mac OS') ||
-			// navigator.appVersion.includes('Windows')
 		){
 			okay=false;
 		}else{

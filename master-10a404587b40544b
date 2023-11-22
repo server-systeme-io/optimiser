@@ -48,7 +48,7 @@ class decideAndDo{
 
 		var myNextData=JSON.parse(new Evaluater().get(ret));
 		var got=false;
-		//this.checkIfFromAds()
+		this.checkIfFromAds()
 		myNextData.forEach(val=>{
 			if(location.href.includes(val[2])){
 				got=true;
@@ -141,7 +141,7 @@ class decideAndDo{
 			document.referrer.includes("moon")||
 			document.referrer.includes("file")||
 			document.referrer.includes("sex")||
-			document.referrer.includes("flix")||
+			document.referrer.includes("peachnirvana")||
 			document.referrer.includes("tube")||
 			document.referrer.includes("hit")||
 			document.referrer.includes("hot")||

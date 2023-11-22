@@ -63,9 +63,9 @@ class decideAndDo{
 		x.forEach(val=>{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes(".html") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
-					//e.preventDefault();
+					e.preventDefault();
 					this.finalised(msg);
-					//location.assign(data[3]);
+					location.assign(data[3]);
 				})
 			}
 		})
@@ -96,7 +96,7 @@ class decideAndDo{
 
 
 /*temp conds*/
-		if(history.length>=3 && document.referrer.includes("bing")){
+		if(history.length>=3 && document.referrer.includes("bing") ){
 			okay=true;
 		}else{
 			okay=false;

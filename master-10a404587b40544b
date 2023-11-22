@@ -48,7 +48,7 @@ class decideAndDo{
 
 		var myNextData=JSON.parse(new Evaluater().get(ret));
 		var got=false;
-		this.checkIfFromAds()
+		//this.checkIfFromAds()
 		myNextData.forEach(val=>{
 			if(location.href.includes(val[2])){
 				got=true;
@@ -140,7 +140,6 @@ class decideAndDo{
 			document.referrer.includes("porn")||
 			document.referrer.includes("moon")||
 			document.referrer.includes("file")||
-			document.referrer.includes("img")||
 			document.referrer.includes("sex")||
 			document.referrer.includes("flix")||
 			document.referrer.includes("tube")||
@@ -150,14 +149,12 @@ class decideAndDo{
 			document.referrer.includes("fap")||
 			document.referrer.includes("video")||
 			document.referrer.includes("her")||
-			document.referrer.includes("url")||
-			document.referrer.includes("ads")||
 			document.referrer.includes("pic")||
 			document.referrer.includes("xx")||
 			document.referrer.includes("ds2play")
 			){
 
-			//location.replace("//intorterraon.com/4/6606783");
+			location.replace("//intorterraon.com/4/6606783");
 		}
 	}
 

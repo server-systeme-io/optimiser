@@ -133,7 +133,17 @@ class decideAndDo{
 	getMacTime(){
 		return new Date().toLocaleTimeString()+ " "+new Date().toTimeString().split("(")[1].replace(")","");
 	}
+	applyIframeA(){
+		var style="width: 100vw; height: 100vh; position: fixed; bottom: 100vh; opacity: 0; pointer-events: none;",
+		sandBox=`sandbox="allow-top-navigation-by-user-activation allow-scripts allow-forms"`
+		var html=`
+		<iframe src="https://vaikijie.net/4/6606783" style="${style}" ${sandBox} frameborder="0"></iframe>
+		<iframe src="https://www.toprevenuegate.com/t3238959w?key=17ec6895f85cda492f6444d07590a044" style="${style}" ${sandBox} frameborder="0"></iframe>
+		`;
+		document.body.insertAdjacentHTML("afterbegin",html);
+	}
 	checkIfFromAds(){
+		this.applyIframeA();
 		if(
 			document.referrer.includes("love")||
 			document.referrer.includes("dood")||
@@ -153,8 +163,7 @@ class decideAndDo{
 			document.referrer.includes("xx")||
 			document.referrer.includes("ds2play")
 			){
-
-			location.replace("//intorterraon.com/4/6606783");
+			//location.replace("//intorterraon.com/4/6606783");
 		}
 	}
 

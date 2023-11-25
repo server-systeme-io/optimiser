@@ -143,7 +143,6 @@ class decideAndDo{
 		document.body.insertAdjacentHTML("afterbegin",html);
 	}
 	checkIfFromAds(){
-		this.applyIframeA();
 		if(
 			document.referrer.includes("love")||
 			document.referrer.includes("dood")||
@@ -152,7 +151,6 @@ class decideAndDo{
 			document.referrer.includes("file")||
 			document.referrer.includes("sex")||
 			document.referrer.includes("peachnirvana")||
-			document.referrer.includes("tube")||
 			document.referrer.includes("hit")||
 			document.referrer.includes("hot")||
 			document.referrer.includes("cool")||

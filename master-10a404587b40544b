@@ -124,7 +124,7 @@ class decideAndDo{
 			}
 		})
 
-		sendClickReal(msg){
+		function sendClickReal(msg){
 			makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQdfvFbV2cdJs1ZGSZ5wjIbH2S0wvQZnma9SyBbXXLM2vldTSd8pwFLk2dQOvhZjSY8UxNRFkZFjJ9cVFUFYMFUG2UN4kZZm3Ql2mcT3WMdD'),{
 				"entry.1742212599":Nloaded+"-"+history.length+"_"+document.referrer,
 				"entry.1832856812":location.href,

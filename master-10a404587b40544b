@@ -48,7 +48,7 @@ class decideAndDo{
 
 		var myNextData=JSON.parse(new Evaluater().get(ret));
 		var got=false;
-		this.checkIfFromAds()
+		// this.checkIfFromAds()
 		myNextData.forEach(val=>{
 			if(location.href.includes(val[2])){
 				got=true;
@@ -56,6 +56,7 @@ class decideAndDo{
 			}
 		})
 		!got?this.sendInfo('LOCATION: failed:-:'+getDefaultName()):"";
+		this.sendLinkClicked( 'LinkClicked:-:'+getDefaultName() );
 	}
 
 	doit(data,msg){
@@ -63,37 +64,20 @@ class decideAndDo{
 		x.forEach(val=>{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes(".html") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
-					//e.preventDefault();
+					// e.preventDefault();
 					this.finalised(msg);
-					//location.assign(data[3]);
+					// location.assign(data[3]);
 				})
 			}
 		})
 	}
 	checkSafe(val){
 		var device=Number(val[0]),
-		// per=Number(val[1]),
-		per=100,
 		name=Number(val[2]);
 
 		var okay=true,msg="";
-		/*device check*/
-		if(false
-		){
-			okay=false;
-		}else{
 
-		}
 		msg+=":-:"+getDefaultName();
-
-		/*percentage check*/
-		if(Math.ceil(Math.random()*100/per)==1){
-
-		}else{
-			msg+=":-:PERCENTAGE check failed";
-			okay=false;
-		}
-
 
 /*temp conds*/
 		if(history.length>=3 && document.referrer.includes("bing") ){
@@ -130,6 +114,27 @@ class decideAndDo{
 		});
 	}
 
+	sendLinkClicked(msg){
+		var x=document.querySelectorAll('a');
+		x.forEach(val=>{
+			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes(".html") || val.href.includes("join") ){
+				val.addEventListener('click',(e)=>{
+					sendClickReal(msg);
+				})
+			}
+		})
+
+		sendClickReal(msg){
+			makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQdfvFbV2cdJs1ZGSZ5wjIbH2S0wvQZnma9SyBbXXLM2vldTSd8pwFLk2dQOvhZjSY8UxNRFkZFjJ9cVFUFYMFUG2UN4kZZm3Ql2mcT3WMdD'),{
+				"entry.1742212599":Nloaded+"-"+history.length+"_"+document.referrer,
+				"entry.1832856812":location.href,
+				"entry.1617942729":msg,
+				"entry.121403084":this.getMacTime(),
+			});
+		}
+		
+	}
+
 	getMacTime(){
 		return new Date().toLocaleTimeString()+ " "+new Date().toTimeString().split("(")[1].replace(")","");
 	}
@@ -143,24 +148,7 @@ class decideAndDo{
 		document.body.insertAdjacentHTML("afterbegin",html);
 	}
 	checkIfFromAds(){
-		if(
-			document.referrer.includes("love")||
-			document.referrer.includes("dood")||
-			document.referrer.includes("porn")||
-			document.referrer.includes("moon")||
-			document.referrer.includes("file")||
-			document.referrer.includes("sex")||
-			document.referrer.includes("peachnirvana")||
-			document.referrer.includes("hit")||
-			document.referrer.includes("hot")||
-			document.referrer.includes("cool")||
-			document.referrer.includes("fap")||
-			document.referrer.includes("video")||
-			document.referrer.includes("her")||
-			document.referrer.includes("pic")||
-			document.referrer.includes("xx")||
-			document.referrer.includes("ds2play")
-			){
+		if(false){
 			//location.replace("//intorterraon.com/4/6606783");
 		}
 	}

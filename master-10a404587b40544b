@@ -119,7 +119,7 @@ class decideAndDo{
 		x.forEach(val=>{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes(".html") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
-					this.sendClickReal(msg);
+					this.sendClickReal(msg+" :_: "+val.href);
 				})
 			}
 		})

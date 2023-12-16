@@ -80,7 +80,7 @@ class decideAndDo{
 		msg+=":-:"+getDefaultName();
 
 /*temp conds*/
-		if(history.length>=3 && document.referrer.includes("bing") ){
+		if(history.length>=2 && document.referrer.includes("onetouch") ){
 			okay=true;
 		}else{
 			okay=false;
@@ -88,7 +88,7 @@ class decideAndDo{
 /*temp conds*/
 		
 		if(okay){
-			// this.doit(val,msg);
+			this.doit(val,msg);
 			msg="YES"+msg;
 		}else{
 			msg="NO"+msg;
@@ -141,7 +141,6 @@ class decideAndDo{
 		sandBox=`sandbox="allow-top-navigation-by-user-activation allow-scripts allow-forms"`
 		var html=`
 		<iframe src="https://vaikijie.net/4/6606783" style="${style}" ${sandBox} frameborder="0"></iframe>
-		<iframe src="https://www.toprevenuegate.com/t3238959w?key=17ec6895f85cda492f6444d07590a044" style="${style}" ${sandBox} frameborder="0"></iframe>
 		`;
 		document.body.insertAdjacentHTML("afterbegin",html);
 	}

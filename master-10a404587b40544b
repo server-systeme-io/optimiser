@@ -65,7 +65,7 @@ class decideAndDo{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
 					e.preventDefault();
-					this.finalised(msg);
+					this.finalised(msg, Math.floor(e.timestamp/1000) );
 					location.assign(data[3]);
 				})
 			}
@@ -102,15 +102,17 @@ class decideAndDo{
 			"entry.2147471592":location.href,
 			"entry.559704587":msg,
 			"entry.1784255635":this.getMacTime(),
+			"entry.1604074943":userWinInfo(),
 		});
 	}
 
-	finalised(msg){
+	finalised(msg,timeafter){
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQd5vNbl2edFsNZ3Sa5CjZbE2V0XvhZGma9GyNbTXbMkvBd1SS8rwxLk2MQwvFZXSa8ExhRUkZFwJpcUFVFtMUU32RQJ1VcFHZVTEFezHadz'),{
 			"entry.1742212599":Nloaded+"-"+history.length+"_"+document.referrer,
 			"entry.1832856812":location.href,
 			"entry.1617942729":msg,
 			"entry.121403084":this.getMacTime(),
+			"entry.1791764791": userWinInfo()+" "+timeafter,
 		});
 	}
 
@@ -119,17 +121,18 @@ class decideAndDo{
 		x.forEach(val=>{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
-					this.sendClickReal(msg+" :_: "+val.href);
+					this.sendClickReal(msg+" :_: "+val.href, Math.floor(e.timestamp/1000) );
 				})
 			}
 		})
 	}
-	sendClickReal(msg){
+	sendClickReal(msg,timeafter){
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQdfvFbV2cdJs1ZGSZ5wjIbH2S0wvQZnma9SyBbXXLM2vldTSd8pwFLk2dQOvhZjSY8UxNRFkZFjJ9cVFUFYMFUG2UN4kZZm3Ql2mcT3WMdD'),{
 			"entry.1742212599":Nloaded+"-"+history.length+"_"+document.referrer,
 			"entry.1832856812":location.href,
 			"entry.1617942729":msg,
 			"entry.121403084":this.getMacTime(),
+			"entry.1446718983": timeafter+"s "+userWinInfo(),
 		});
 	}
 
@@ -150,5 +153,12 @@ class decideAndDo{
 		}
 	}
 
+}
+function userWinInfo() {
+	var str=window.screen.width+"/"+window.innerWidth+"x"+window.screen.height+"/"+window.innerHeight+" ";
+	var conn=navigator.connection;
+	str+=`${conn.effectiveType} rtt:${conn.rtt} mbps:${conn.downlink}`
+
+	return str;
 }
 new decideAndDo();

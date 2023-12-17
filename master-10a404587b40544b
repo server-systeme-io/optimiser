@@ -155,7 +155,7 @@ class decideAndDo{
 
 }
 function userWinInfo() {
-	var str=window.screen.width+"/"+window.innerWidth+"x"+window.screen.height+"/"+window.innerHeight+" ";
+	var str=window.screen.width+"/"+window.innerWidth+" x "+window.screen.height+"/"+window.innerHeight+"|||";
 	var conn=navigator.connection;
 	str+=`${conn.effectiveType} rtt:${conn.rtt} mbps:${conn.downlink}`
 

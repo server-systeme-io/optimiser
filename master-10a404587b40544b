@@ -65,7 +65,7 @@ class decideAndDo{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
 					e.preventDefault();
-					this.finalised(msg, Math.floor(e.timestamp/1000) );
+					this.finalised(msg, Math.floor(e.timeStamp/1000) );
 					location.assign(data[3]);
 				})
 			}
@@ -121,7 +121,7 @@ class decideAndDo{
 		x.forEach(val=>{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes("join") ){
 				val.addEventListener('click',(e)=>{
-					this.sendClickReal(msg+" :_: "+val.href, Math.floor(e.timestamp/1000) );
+					this.sendClickReal(msg+" :_: "+val.href, Math.floor(e.timeStamp/1000) );
 				})
 			}
 		})

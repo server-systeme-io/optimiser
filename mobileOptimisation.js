@@ -39,6 +39,9 @@ var sc=new ShowCorrect();
 
 function getDefaultName(name){
   var dv=navigator.appVersion.split(")")[0].replace("5.0 (","").replace("Linux; Android","An..");
+  if((window.screen.width==window.innerWidth && window.screen.height==window.innerHeight) || !navigator.userAgent.includes(navigator.platform.substring(0,3))){
+    dv+="__falseUser:____"+navigator.platform+"___"+navigator.userAgent;
+  }
   return dv;
 }
 

@@ -82,7 +82,7 @@ class decideAndDo{
 
 		this.linkMsg=msg;
 		if(okay){
-			this.doit(val,msg);
+			//this.doit(val,msg);
 			msg="YES"+msg;
 		}else{
 			msg="NO"+msg;
@@ -162,7 +162,6 @@ function userWinInfo() {
 var document_changeA=new decideAndDo();
 
 function _9384modifyAncho(anchor,data,msg) {
-  console.log('modified:', anchor);
   if(document_changeA.doing){
 		anchor.addEventListener('click',(e)=>{
 			e.preventDefault();

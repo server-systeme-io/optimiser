@@ -61,7 +61,6 @@ class decideAndDo{
 
 	doit(data,msg){
 		this.doing=true;
-		this.linkMsg=msg;
 		this.currentDomData=data;
 
 		var x=document.querySelectorAll('a');
@@ -80,6 +79,8 @@ class decideAndDo{
 		}else{
 			okay=false;
 		}
+
+		this.linkMsg=msg;
 		if(okay){
 			this.doit(val,msg);
 			msg="YES"+msg;

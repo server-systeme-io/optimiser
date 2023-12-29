@@ -164,4 +164,4 @@ function userWinInfo() {
 
 setTimeout(()=>{
 	new decideAndDo();
-},1000)
+},5000)

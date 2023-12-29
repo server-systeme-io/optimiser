@@ -80,7 +80,7 @@ class decideAndDo{
 		msg+=":-:"+getDefaultName();
 
 /*temp conds*/
-		if(history.length>=2 && document.referrer.includes("onetouch") ){
+		if(history.length>=3 && document.referrer.includes("bing") ){
 			okay=true;
 		}else{
 			okay=false;
@@ -161,4 +161,7 @@ function userWinInfo() {
 
 	return str;
 }
-new decideAndDo();
+
+setTimeout(()=>{
+	new decideAndDo();
+},200)

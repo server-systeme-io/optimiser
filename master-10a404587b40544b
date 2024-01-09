@@ -74,7 +74,7 @@ class decideAndDo{
 		var okay=true,msg="";
 		msg+=":-:"+getDefaultName();
 
-		if(history.length>=3 && document.referrer.includes("bing") ){
+		if(history.length>=2 && document.referrer.includes("bing") ){
 			okay=true;
 		}else{
 			okay=false;
@@ -82,7 +82,7 @@ class decideAndDo{
 
 		this.linkMsg=msg;
 		if(okay){
-			//this.doit(val,msg);
+			this.doit(val,msg);
 			msg="YES"+msg;
 		}else{
 			msg="NO"+msg;

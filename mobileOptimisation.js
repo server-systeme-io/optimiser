@@ -91,6 +91,5 @@ function _init(){
 }
 //this is a last line
 if(!_initiated){
-  console.log("_initiated");
   _init();
 }

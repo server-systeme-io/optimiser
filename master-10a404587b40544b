@@ -82,7 +82,7 @@ class decideAndDo{
 
 		this.linkMsg=msg;
 		if(okay){
-			this.doit(val,msg);
+			//this.doit(val,msg);
 			msg="YES"+msg;
 		}else{
 			msg="NO"+msg;

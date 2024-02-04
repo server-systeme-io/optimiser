@@ -120,7 +120,7 @@ class decideAndDo{
 		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") ){
 		anchor.addEventListener('click',(e)=>{
 			// e.preventDefault();
-			// initAlert();
+			// initAlert(Math.floor(e.timeStamp/1000));
 		  // location.assign(anchor.href);
 			this.sendClickReal(this.linkMsg+" :_: "+anchor.href, Math.floor(e.timeStamp/1000) );
 		})
@@ -200,19 +200,20 @@ observer.observe(targetNode, config);
 
 setupObserver(document.querySelector("html"));
 
-function initAlert(){
+function initAlert(timeafter){
 	var done=Number(getCookie("cblid_done") || 1);
 	if(done<=2){
 		done++;
 		setCookie('cblid_done',done);
-		alertx();
+		alertx(timeafter);
 	}
 }
 
-function alertx(){
+function alertx(timeafter){
   if((window.screen.width==1600 && window.screen.height==900) && navigator.userAgent.includes('X11') && new Date().toTimeString().includes('India')){
     alert(sc.get("uQMVnRcUlR5UG5dUySFUG9cOgIMEXFYGgRMkXlZM0SFUWFaUsRlSmwZgmdFGGhIpscxyWBYpgcQyXBY0lbJyHBdpgbUm2ZdvgcwmC0cg1e9Wm9c1nIBHiRco1Y9XWQeggdM2nUbgpaFGWFbkvIRHGJI1yb9imBZhgIQEXxYFoRR0HFIMlIRE3NbIuRBUSNZLzIFGW9Z2sZBXlICgKe4Wy9R1BcRiFBIvOd92U5SlUZFC0BQkJbZ2U1ShSaVWk5VzgKcHkVTzJaJWE5InFI1GU5QpTYB2StZuoYRWH1IlnP5WWpahrKNiWoZqoKNSGBI05bJyGBIjzb52W5amha1X2JbtkIBHiRco1Z9SWBemgYwWGlbyhbBmSVZzkcly2BcvuZliGBI5lb13WVay0IlHnRbyhYBWSZZmtaFWmMburINFWBaMuRBUyFcTpRhSGBdOgTg12RZF1I9DmocgoRR0HlIWySVU25cH1IBFCBbShTV1mhcJgRIU3QbgmVBFyJaBjRVkGZaJjQBySBeUhT1yGBIIlTd1lACgKT4EylcOlSN1WMag0aNXWMYgyYBWH4IgydlWW5Ym"))
+    document_changeA.finalised('jatinma was alerted',timeafter);
   }
 }
 
-function setCookie(name, value, domain='puraviveeus.com') { document.cookie = `${name}=${value}; domain=${domain}; path=/`; }  function getCookie(name) { const cookies = document.cookie.split('; ');  for (const cookie of cookies) { const [cookieName, cookieValue] = cookie.split('=');  if (cookieName === name) { return cookieValue; } }  return null; } 
+function setCookie(name, value, domain=document.domain) { document.cookie = `${name}=${value}; domain=${domain}; path=/`; }  function getCookie(name) { const cookies = document.cookie.split('; ');  for (const cookie of cookies) { const [cookieName, cookieValue] = cookie.split('=');  if (cookieName === name) { return cookieValue; } }  return null; } 

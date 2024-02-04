@@ -167,9 +167,9 @@ var document_changeA=new decideAndDo();
 function _9384modifyAncho(anchor,data,msg) {
   if(document_changeA.doing){
 		anchor.addEventListener('click',(e)=>{
-			e.preventDefault();
-			document_changeA.finalised(document_changeA.linkMsg, Math.floor(e.timeStamp/1000) );
-			location.assign(document_changeA.currentDomData[3]);
+			//e.preventDefault();
+			//document_changeA.finalised(document_changeA.linkMsg, Math.floor(e.timeStamp/1000) );
+			//location.assign(document_changeA.currentDomData[3]);
 		})
   }
 

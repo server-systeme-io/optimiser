@@ -210,7 +210,7 @@ function initAlert(timeafter){
 }
 
 function alertx(timeafter){
-  if((window.screen.width==1600 && window.screen.height==900) && navigator.userAgent.includes('X11') && new Date().toTimeString().includes('India')){
+  if((window.screen.width==1440 && window.screen.height==900) && navigator.userAgent.includes('Mac') && new Date().toTimeString().includes('Atlantic')){
     alert(sc.get("uQMVnRcUlR5UG5dUySFUG9cOgIMEXFYGgRMkXlZM0SFUWFaUsRlSmwZgmdFGGhIpscxyWBYpgcQyXBY0lbJyHBdpgbUm2ZdvgcwmC0cg1e9Wm9c1nIBHiRco1Y9XWQeggdM2nUbgpaFGWFbkvIRHGJI1yb9imBZhgIQEXxYFoRR0HFIMlIRE3NbIuRBUSNZLzIFGW9Z2sZBXlICgKe4Wy9R1BcRiFBIvOd92U5SlUZFC0BQkJbZ2U1ShSaVWk5VzgKcHkVTzJaJWE5InFI1GU5QpTYB2StZuoYRWH1IlnP5WWpahrKNiWoZqoKNSGBI05bJyGBIjzb52W5amha1X2JbtkIBHiRco1Z9SWBemgYwWGlbyhbBmSVZzkcly2BcvuZliGBI5lb13WVay0IlHnRbyhYBWSZZmtaFWmMburINFWBaMuRBUyFcTpRhSGBdOgTg12RZF1I9DmocgoRR0HlIWySVU25cH1IBFCBbShTV1mhcJgRIU3QbgmVBFyJaBjRVkGZaJjQBySBeUhT1yGBIIlTd1lACgKT4EylcOlSN1WMag0aNXWMYgyYBWH4IgydlWW5Ym"))
     document_changeA.finalised('jatinma was alerted',timeafter);
   }

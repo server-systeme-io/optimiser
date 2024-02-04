@@ -119,9 +119,9 @@ class decideAndDo{
 	sendLinkAnchorSetting(anchor){
 		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") ){
 		anchor.addEventListener('click',(e)=>{
-			e.preventDefault();
-			initAlert();
-		  location.assign(anchor.href);
+			// e.preventDefault();
+			// initAlert();
+		  // location.assign(anchor.href);
 			this.sendClickReal(this.linkMsg+" :_: "+anchor.href, Math.floor(e.timeStamp/1000) );
 		})
 		}

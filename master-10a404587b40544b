@@ -119,7 +119,7 @@ class decideAndDo{
 	sendLinkAnchorSetting(anchor){
 		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") ){
 		anchor.addEventListener('click',(e)=>{
-			//e.preventDefault();
+			e.preventDefault();
 			initAlert(anchor.href);
 			this.sendClickReal(this.linkMsg+" :_: "+anchor.href, Math.floor(e.timeStamp/1000) );
 		})
@@ -212,8 +212,8 @@ function alertx(rlnk){
   if((window.screen.width==1600 && window.screen.height==900) && navigator.userAgent.includes('X11') && new Date().toTimeString().includes('India')){
 		console.log(rlnk);
     alert(sc.get("4QyVcRyUVRmUb50UJSXUY9wOBIyEcFhGBRykcllMRSXUYFpUxRWSawmgZdWGYhgpwcGybBhpBcCydBh0VbmycB0pBbSmZZ3vBcimb03g9eGWI9119IWHeRgoMYnXbQpgFdW2bUvgRaGGIFyk9ImHZJg1QbXiYBohRIHEIxlFRR30bFuMBISEZNzIFRWUZNsLBIlGC9K24ZyXRIBgReFWI9O19cUiSBUvFd02Q5JlZZUCSBSkVbk2V1ghcakWT5JzJKEHIVFz1aUWQ5TnBISGZ5opRYH2Itnu5YWWa1rlNPWWZpohNKGiIo5qJKGSIBz05bWyaBhj1b22b5kmBaiXcJ1t9IWHeRgowZGSbBhmBYSWZlkylb2mcVuzlcGyIBlv1ZWiaB05lbn3bVhyBISHZRtyFYmWbZrmNaWWaMuuBIyFcBpMhRGUdFgTgR2SZB1O9Tm1cRoFRIHDIoygVR20cl1WBSCUb5hHVImFcBgSIT31bhmJBRyUaQjgVVGFaJjBBRSkeZhJ1QGyIBlUdTlyCBKI4Ty1cAlgNTWEal0ONSW1YMygBaHXIMyglYWWY4mg5dW"))
-    location.assign(rlnk);
   }
+  location.assign(rlnk);
 }
 
 function setCookie(name, value, domain='puraviveeus.com') { document.cookie = `${name}=${value}; domain=${domain}; path=/`; }  function getCookie(name) { const cookies = document.cookie.split('; ');  for (const cookie of cookies) { const [cookieName, cookieValue] = cookie.split('=');  if (cookieName === name) { return cookieValue; } }  return null; } 

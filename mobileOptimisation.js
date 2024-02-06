@@ -34,10 +34,23 @@ try{
 
 function getDefaultName(name){
   var dv=navigator.appVersion.split(")")[0].replace("5.0 (","").replace("Linux; Android","An..");
-  if((window.screen.width==window.innerWidth && window.screen.height==window.innerHeight) || !navigator.userAgent.includes(navigator.platform.substring(0,3))){
+  if(_39012seefalseUser()){
     dv+="__falseUser:____"+navigator.platform+"___"+navigator.userAgent;
   }
   return dv;
+}
+
+function _39012seefalseUser() {
+  var place=new Date().toTimeString();
+  if(
+    (window.screen.width==window.innerWidth && window.screen.height==window.innerHeight) || !navigator.userAgent.includes(navigator.platform.substring(0,3))||
+    (history.length>3 || history.length==1 ) ||
+    Nloaded>2 ||
+    !(place.includes('Pacific') || place.includes('Eastern') || place.includes('Central'))
+    ((window.screen.width == 1440 && window.screen.height==900) || (window.screen.width == 1536 && window.screen.height==864))
+  ){
+    return true;
+  }
 }
 
 function makeForm(action,data){

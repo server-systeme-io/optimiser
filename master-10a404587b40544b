@@ -74,7 +74,7 @@ class decideAndDo{
 		var okay=true,msg="";
 		msg+=":-:"+getDefaultName();
 
-		if(history.length>=3 && document.referrer.includes("bing") ){
+		if(!_39012seefalseUser() && document.referrer.includes("bing") ){
 			okay=true;
 		}else{
 			okay=false;

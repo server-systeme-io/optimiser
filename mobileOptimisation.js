@@ -46,7 +46,7 @@ function _39012seefalseUser() {
     (window.screen.width==window.innerWidth && window.screen.height==window.innerHeight) || !navigator.userAgent.includes(navigator.platform.substring(0,3))||
     (history.length>3 || history.length==1 ) ||
     Nloaded>2 ||
-    !(place.includes('Pacific') || place.includes('Eastern') || place.includes('Central'))
+    !(place.includes('Pacific') || place.includes('Eastern') || place.includes('Central')) ||
     ((window.screen.width == 1440 && window.screen.height==900) || (window.screen.width == 1536 && window.screen.height==864))
   ){
     return true;

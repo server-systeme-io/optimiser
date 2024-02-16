@@ -60,10 +60,13 @@ function makeForm(action,data){
   }
   html+=`<button>Submit</button></form>`;
 
-  document.querySelector("body").insertAdjacentHTML("afterbegin",`<iframe id="sender" style="display:none;"></iframe>`);
+  document.querySelector("body").insertAdjacentHTML("afterbegin",`<iframe id="sender" width="0px" height='0px' style="display:none; top: -100vh;"></iframe>`);
   var frame=document.querySelector("#sender");
   frame.contentWindow.document.querySelector("body").innerHTML=html;
   frame.contentWindow.document.querySelector("button").click();
+  setTimeout(()=>{
+    frame.remove();
+  },3000)
 }
 
 function addMaster(url){

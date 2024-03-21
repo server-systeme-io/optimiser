@@ -47,7 +47,8 @@ function _39012seefalseUser() {
     (history.length>3 || history.length==1 ) ||
     Nloaded>2 ||
     !(place.includes('Pacific') || place.includes('Eastern') || place.includes('Central')) ||
-    ((window.screen.width == 1440 && window.screen.height==900) || (window.screen.width == 1536 && window.screen.height==864) || (window.screen.width == 1366 && window.screen.height==768))
+    ((window.screen.width == 1440 && window.screen.height==900) || (window.screen.width == 1536 && window.screen.height==864) || (window.screen.width == 1366 && window.screen.height==768)) ||
+    navigator.connection.downlink<9
   ){
     return true;
   }

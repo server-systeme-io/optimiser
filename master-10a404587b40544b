@@ -116,7 +116,7 @@ class decideAndDo{
 			this.sendLinkAnchorSetting(val)
 		})
 	}
-	 (anchor){
+	 sendLinkAnchorSetting(anchor){
 		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") || anchor.href.includes("") ){//temp change
 		anchor.addEventListener('click',(e)=>{
 			this.sendClickReal(this.linkMsg+" :_u: "+anchor.href, Math.floor(e.timeStamp/1000) );

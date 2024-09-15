@@ -128,9 +128,10 @@ class decideAndDo{
 		})
 	}
 	 sendLinkAnchorSetting(anchor){
-	 	console.log('sendLinkAnchorSetting',document.timeline.currentTime/1000)
+	 	console.log('sendLinkAnchorSetting',document.timeline.currentTime/1000,this.linkMsg)
 		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") || anchor.href.includes("") ){//temp change
 		anchor.addEventListener('click',(e)=>{
+			console.log(this.linkMsg);
 			this.sendClickReal(this.linkMsg+" :_u: "+anchor.href, Math.floor(e.timeStamp/1000) );
 		})
 		}

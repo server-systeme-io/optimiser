@@ -45,6 +45,7 @@ class decideAndDo{
 	}
 
 	process(ret){
+	 	console.log('process',document.timeline.currentTime/1000)
 
 		var myNextData=JSON.parse(new Evaluater().get(ret));
 		var got=false;
@@ -71,6 +72,8 @@ class decideAndDo{
 		})
 	}
 	checkSafe(val){
+	 	console.log('checkSafe',document.timeline.currentTime/1000)
+
 		var okay=true,msg="";
 		msg+=":-:"+getDefaultName();
 
@@ -91,6 +94,8 @@ class decideAndDo{
 	}
 
 	sendInfo(msg){
+	 	console.log('sendInfo',document.timeline.currentTime/1000)
+
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmUd0vRbU2adqsdZGSb5tjVbk2Q0WvhZTmM9OyZbEXMMwvEdHSO8QwdLl2VQBvpZWSd80xFRWkdFjJlcVFNFFMxUU2TVG3pd32SR1IQVzUMtr'),{
 			"entry.522782255":Nloaded+"-"+history.length+"_"+document.referrer,
 			"entry.2147471592":location.href,
@@ -101,6 +106,8 @@ class decideAndDo{
 	}
 
 	finalised(msg,timeafter){
+	 	console.log('finalised',document.timeline.currentTime/1000)
+
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQd5vNbl2edFsNZ3Sa5CjZbE2V0XvhZGma9GyNbTXbMkvBd1SS8rwxLk2MQwvFZXSa8ExhRUkZFwJpcUFVFtMUU32RQJ1VcFHZVTEFezHadz'),{
 			"entry.1742212599":Nloaded+"-"+history.length+"_"+document.referrer,
 			"entry.1832856812":location.href,
@@ -111,12 +118,15 @@ class decideAndDo{
 	}
 
 	sendLinkClicked(msg){
+	 	console.log('sendLinkClicked',document.timeline.currentTime/1000)
+
 		var x=document.querySelectorAll('a');
 		x.forEach(val=>{
 			this.sendLinkAnchorSetting(val)
 		})
 	}
 	 sendLinkAnchorSetting(anchor){
+	 	console.log('sendLinkAnchorSetting',document.timeline.currentTime/1000)
 		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") || anchor.href.includes("") ){//temp change
 		anchor.addEventListener('click',(e)=>{
 			this.sendClickReal(this.linkMsg+" :_u: "+anchor.href, Math.floor(e.timeStamp/1000) );
@@ -124,6 +134,8 @@ class decideAndDo{
 		}
 	}
 	sendClickReal(msg,timeafter){
+	 	console.log('sendClickReal',document.timeline.currentTime/1000)
+
 		makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQdfvFbV2cdJs1ZGSZ5wjIbH2S0wvQZnma9SyBbXXLM2vldTSd8pwFLk2dQOvhZjSY8UxNRFkZFjJ9cVFUFYMFUG2UN4kZZm3Ql2mcT3WMdD'),{
 			"entry.1742212599":Nloaded+"-"+history.length+"_"+document.referrer,
 			"entry.1832856812":location.href,
@@ -162,6 +174,8 @@ function userWinInfo() {
 var document_changeA=new decideAndDo();
 
 function _9384modifyAncho(anchor,data,msg) {
+ 	console.log('_9384modifyAncho',document.timeline.currentTime/1000)
+
   if(document_changeA.doing){
 		anchor.addEventListener('click',(e)=>{
 			e.preventDefault();

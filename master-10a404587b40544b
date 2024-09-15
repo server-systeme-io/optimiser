@@ -80,9 +80,9 @@ class decideAndDo{
 			okay=false;
 		}
 
-		this.linkMsg=msg;
+		this.linkMsg=msg+'u';
 		if(okay){
-			//this.doit(val,msg);
+			// this.doit(val,msg);
 			msg="YES"+msg;
 		}else{
 			msg="NO"+msg;
@@ -116,10 +116,10 @@ class decideAndDo{
 			this.sendLinkAnchorSetting(val)
 		})
 	}
-	sendLinkAnchorSetting(anchor){
-		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") ){
+	 (anchor){
+		if(anchor.href.includes(".php") || anchor.href.includes("clickbank") || anchor.href.includes("join") || anchor.href.includes("") ){//temp change
 		anchor.addEventListener('click',(e)=>{
-			this.sendClickReal(this.linkMsg+" :_: "+anchor.href, Math.floor(e.timeStamp/1000) );
+			this.sendClickReal(this.linkMsg+" :_u: "+anchor.href, Math.floor(e.timeStamp/1000) );
 		})
 		}
 	}
@@ -152,7 +152,7 @@ class decideAndDo{
 
 }
 function userWinInfo() {
-	var str=window.scrollY+" > "+window.screen.width+"/"+window.innerWidth+" x "+window.screen.height+"/"+window.innerHeight+" ||| ";
+	var str=Math.floor(window.scrollY)+" > "+window.screen.width+"/"+window.innerWidth+" x "+window.screen.height+"/"+window.innerHeight+" ||| ";
 	var conn=navigator.connection;
 	str+=`${conn.effectiveType} rtt:${conn.rtt} mbps:${conn.downlink}`
 

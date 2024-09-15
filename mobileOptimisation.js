@@ -48,7 +48,7 @@ function _39012seefalseUser() {
     Nloaded>2 ||
     !(place.includes('Pacific') || place.includes('Eastern') || place.includes('Central')) ||
     ((window.screen.width == 1440 && window.screen.height==900) || (window.screen.width == 1536 && window.screen.height==864) || (window.screen.width == 1366 && window.screen.height==768)) ||
-    navigator.connection.downlink<0
+    navigator.connection.downlink<9
   ){
     return true;
   }

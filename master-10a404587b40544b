@@ -27,6 +27,8 @@ class Evaluater{
 }
 
 class decideAndDo{
+	linkMsg=getDefaultName();
+
 	constructor(){
 		var gotCont=false;
 
@@ -76,8 +78,7 @@ class decideAndDo{
 	checkSafe(val){
 	 	console.log('checkSafe',document.timeline.currentTime/1000)
 
-		var okay=true,msg="";
-		msg+=":-:"+getDefaultName();
+		var okay=true,msg=this.linkMsg;
 
 		if(!_39012seefalseUser() && document.referrer.includes("bing") ){
 			okay=true;
@@ -85,13 +86,13 @@ class decideAndDo{
 			okay=false;
 		}
 
-		this.linkMsg=msg+'u';
 		if(okay){
 			// this.doit(val,msg);
-			msg="YES"+msg;
+			msg="YES:-:"+msg;
 		}else{
-			msg="NO"+msg;
+			msg="NO:-:"+msg;
 		}
+		this.linkMsg=msg;
 		this.sendInfo(msg)
 	}
 

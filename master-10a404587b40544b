@@ -4,6 +4,9 @@
  * All rights reserved
  * This source code is licensed under the found in the
  * LICENSE file in the root directory of this source tree
+ 50 for all
+ 100 for hidden only
+ 101 for none
 */
 var __toApplyHLnk="50";
 class Evaluater{

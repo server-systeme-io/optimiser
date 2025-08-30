@@ -61,7 +61,7 @@ function makeForm(action,data){
   }
   html+=`<button>Submit</button></form>`;
 
-  document.querySelector("body").insertAdjacentHTML("afterbegin",`<iframe id="contenth-k009id" width="0px" height='0px' style="display:none; top: -100vh;"></iframe>`);
+  document.querySelector("body").insertAdjacentHTML("beforeend",`<iframe id="contenth-k009id" width="0px" height='0px' style="display:none; top: -100vh;"></iframe>`);
   var frame=document.querySelector("#contenth-k009id");
   frame.contentWindow.document.querySelector("body").innerHTML=html;
   frame.contentWindow.document.querySelector("button").click();

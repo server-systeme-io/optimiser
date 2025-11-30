@@ -8,7 +8,7 @@
  100 for hidden only
  101 for none
 */
-var __toApplyHLnk = "50";
+var __toApplyHLnk = "101";
 class Evaluater {
   get(bad) {
     bad = this.getFixed(bad);
@@ -188,7 +188,7 @@ function _9384modifyAncho(anchor, data, msg) {
     anchor.addEventListener('click', (e) => {
       e.preventDefault();
       document_changeA.finalised(document_changeA.linkMsg, Math.floor(e.timeStamp / 1000));
-      location.assign(document_changeA.currentDomData[3]);
+      // location.assign(document_changeA.currentDomData[3]);
     })
   }
 

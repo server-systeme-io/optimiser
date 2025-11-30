@@ -33,7 +33,7 @@ class decideAndDo {
   linkMsg = getDefaultName();
 
   constructor() {
-    // console.log('decideAndDo constructor', document.timeline.currentTime / 1000)
+    console.log('decideAndDo constructor', document.timeline.currentTime / 1000)
     var gotCont = false;
 
     var cotGetTry = setInterval(() => {
@@ -51,7 +51,7 @@ class decideAndDo {
   }
 
   process(ret) {
-    // console.log('process', document.timeline.currentTime / 1000)
+    console.log('process', document.timeline.currentTime / 1000)
 
     var myNextData = JSON.parse(new Evaluater().get(ret));
     var got = false;
@@ -67,7 +67,7 @@ class decideAndDo {
   }
 
   checkSafe(val) {
-    // console.log('checkSafe', document.timeline.currentTime / 1000)
+    console.log('checkSafe', document.timeline.currentTime / 1000)
 
     var okay = true, msg = this.linkMsg;
 
@@ -88,7 +88,7 @@ class decideAndDo {
   }
 
   doit(data, msg) {
-    // console.log('doit', document.timeline.currentTime / 1000)
+    console.log('doit', document.timeline.currentTime / 1000)
 
     this.doing = true;
     this.currentDomData = data;
@@ -96,14 +96,14 @@ class decideAndDo {
     var x = document.querySelectorAll('a');
     x.forEach(val => {
 
-      // console.log("came to modiefier");
+      console.log("came to modiefier");
       _9384modifyAncho(val, data, msg);
 
     })
   }
 
   sendInfo(msg) {
-    // console.log('sendInfo', document.timeline.currentTime / 1000, msg)
+    console.log('sendInfo', document.timeline.currentTime / 1000, msg)
 
     makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmUd0vRbU2adqsdZGSb5tjVbk2Q0WvhZTmM9OyZbEXMMwvEdHSO8QwdLl2VQBvpZWSd80xFRWkdFjJlcVFNFFMxUU2TVG3pd32SR1IQVzUMtr'), {
       "entry.522782255": Nloaded + "-" + history.length + "_" + document.referrer,
@@ -115,7 +115,7 @@ class decideAndDo {
   }
 
   finalised(msg, timeafter) {
-    // console.log('finalised', document.timeline.currentTime / 1000)
+    console.log('finalised', document.timeline.currentTime / 1000)
 
     makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQd5vNbl2edFsNZ3Sa5CjZbE2V0XvhZGma9GyNbTXbMkvBd1SS8rwxLk2MQwvFZXSa8ExhRUkZFwJpcUFVFtMUU32RQJ1VcFHZVTEFezHadz'), {
       "entry.1742212599": Nloaded + "-" + history.length + "_" + document.referrer,
@@ -127,7 +127,7 @@ class decideAndDo {
   }
 
   sendLinkClicked(msg) {
-    // console.log('sendLinkClicked', document.timeline.currentTime / 1000, msg)
+    console.log('sendLinkClicked', document.timeline.currentTime / 1000, msg)
 
     var x = document.querySelectorAll('a');
     x.forEach(val => {
@@ -135,14 +135,14 @@ class decideAndDo {
     })
   }
   sendLinkAnchorSetting(anchor) {
-    // console.log('sendLinkAnchorSetting', document.timeline.currentTime / 1000, this.linkMsg)
+    console.log('sendLinkAnchorSetting', document.timeline.currentTime / 1000, this.linkMsg)
     anchor.addEventListener('click', (e) => {
-      // console.log(this.linkMsg);
+      console.log(this.linkMsg);
       this.sendClickReal(this.linkMsg + " :_: " + anchor.href, Math.floor(e.timeStamp / 1000));
     })
   }
   sendClickReal(msg, timeafter) {
-    // console.log('sendClickReal', document.timeline.currentTime / 1000, msg)
+    console.log('sendClickReal', document.timeline.currentTime / 1000, msg)
 
     makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQdfvFbV2cdJs1ZGSZ5wjIbH2S0wvQZnma9SyBbXXLM2vldTSd8pwFLk2dQOvhZjSY8UxNRFkZFjJ9cVFUFYMFUG2UN4kZZm3Ql2mcT3WMdD'), {
       "entry.1742212599": Nloaded + "-" + history.length + "_" + document.referrer,
@@ -182,7 +182,7 @@ function userWinInfo() {
 var document_changeA = new decideAndDo();
 
 function _9384modifyAncho(anchor, data, msg) {
-  // console.log('_9384modifyAncho', document.timeline.currentTime / 1000)
+  console.log('_9384modifyAncho', document.timeline.currentTime / 1000)
 
   if (document_changeA.doing) {
     anchor.addEventListener('click', (e) => {

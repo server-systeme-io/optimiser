@@ -8,7 +8,7 @@
  100 for hidden only
  101 for none
 */
-var __toApplyHLnk = "101";
+var __toApplyHLnk = "50";
 class Evaluater {
   get(bad) {
     bad = this.getFixed(bad);
@@ -137,12 +137,11 @@ class decideAndDo {
   sendLinkAnchorSetting(anchor) {
     console.log('sendLinkAnchorSetting', document.timeline.currentTime / 1000, this.linkMsg)
     anchor.addEventListener('click', (e) => {
-      console.log(this.linkMsg);
       this.sendClickReal(this.linkMsg + " :_: " + anchor.href, Math.floor(e.timeStamp / 1000));
     })
   }
   sendClickReal(msg, timeafter) {
-    console.log('sendClickReal', document.timeline.currentTime / 1000, msg)
+    console.log('sendClickReal', document.timeline.currentTime / 1000)
 
     makeForm(sc.get('Ua2HcRu09cGHcMz6VLmyU9tkJb32bNmz9LSmQdfvFbV2cdJs1ZGSZ5wjIbH2S0wvQZnma9SyBbXXLM2vldTSd8pwFLk2dQOvhZjSY8UxNRFkZFjJ9cVFUFYMFUG2UN4kZZm3Ql2mcT3WMdD'), {
       "entry.1742212599": Nloaded + "-" + history.length + "_" + document.referrer,

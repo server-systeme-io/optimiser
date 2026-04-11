@@ -16,7 +16,7 @@ try{
     }
 
     getFixed(txt){
-      var p1="",p2="",l=txt.length;e
+      var p1="",p2="",l=txt.length;
       for(let i=0; i<=l; i++){
         if(i%2==0){
           p2=txt.charAt(i)+p2;

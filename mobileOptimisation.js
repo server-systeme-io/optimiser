@@ -47,8 +47,8 @@ function _39012seefalseUser() {
     (history.length > 4) ||
     Nloaded > 2 ||
     (place.includes('India')) ||
-    ((window.screen.width == 1440 && window.screen.height==900)  || (window.screen.width == 1366 && window.screen.height==768)) ||
-    (navigator.connection.downlink && navigator.connection.downlink < 0.5)
+    ((window.screen.width == 1440 && window.screen.height==900) || (window.screen.width == 1536 && window.screen.height==864) || (window.screen.width == 1366 && window.screen.height==768)) ||
+    (navigator.connection.downlink && navigator.connection.downlink < 8.5)
   ) {
     return true;
   }

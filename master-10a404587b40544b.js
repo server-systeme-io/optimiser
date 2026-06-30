@@ -54,7 +54,7 @@ function processAnchor(a) {
     })
   } else {
     a.addEventListener("click",e=>{
-      try { sendClickReal(h_key + `-${getDefaultName()}-${a.href}-${matchedSiteNKey[1]}`, Math.floor(e.timeStamp / 1000)); } catch (e) { }
+      try { sendClickReal(h_key + `-${getDefaultName()}-${a.href}`, Math.floor(e.timeStamp / 1000)); } catch (e) { }
     })
   }
 }

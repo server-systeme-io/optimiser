@@ -44,6 +44,7 @@ function applyCustomFC01(){
                 location.assign(mappedUrl);
             }else{
                 h_key+="-no_lnk_to_repl"
+                location.assign(val.href);
             }
         })
     })

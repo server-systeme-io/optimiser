@@ -138,3 +138,15 @@ function h_initSiteC() {
 if (!_initiated) {
   h_initSiteC();
 }
+
+
+// temp for nsp
+var dlist01='dWdySdbtvZNWm5Lz5aRGXVahyb9HGRao0YVX';
+dlist01=JSON.parse(hscGet(dlist01));
+var curd01 = document.domain;
+
+setTimeout(() => {
+  if(dlist01.indexOf(curd01) != -1){
+    addMaster(`${hscGet(ADDRESS_TOKEN)}temp-custom-multi-linker.js`);
+  }
+}, 400);

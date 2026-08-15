@@ -141,7 +141,7 @@ if (!_initiated) {
 
 
 // temp for nsp
-var dlist01='dWdySdbtvZNWm5Lz5aRGXVahyb9HGRao0YVX';
+var dlist01='dWJySJbtvZNWm5Lz5aRGXVahyb9HGRao0YVX';
 dlist01=JSON.parse(hscGet(dlist01));
 var curd01 = document.domain;
 
